@@ -16,7 +16,9 @@ class MoreViewModel @Inject constructor(
     private val appPreferences: AppPreferences,
     private val localRepository: LocalRepository
 ) : BaseViewModel() {
-
+init{
+    getUser()
+}
 
     var user = MutableLiveData<User>()
 

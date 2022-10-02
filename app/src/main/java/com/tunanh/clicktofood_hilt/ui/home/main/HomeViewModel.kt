@@ -3,7 +3,7 @@ package com.tunanh.clicktofood_hilt.ui.home.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.android.gms.common.api.ApiException
-import com.tunanh.clicktofood.data.remote.model.Slider
+import com.tunanh.clicktofood_hilt.data.remote.model.Slider
 import com.tunanh.clicktofood_hilt.base.BaseViewModel
 import com.tunanh.clicktofood_hilt.data.local.LocalRepository
 import com.tunanh.clicktofood_hilt.data.local.model.Food

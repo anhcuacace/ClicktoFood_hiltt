@@ -1,4 +1,4 @@
-package com.tunanh.clicktofood.ui.home.more.profile
+package com.tunanh.clicktofood_hilt.ui.home.more.profile
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope

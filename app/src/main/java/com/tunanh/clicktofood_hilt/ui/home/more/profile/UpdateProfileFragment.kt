@@ -13,7 +13,6 @@ import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
-import com.tunanh.clicktofood.ui.home.more.profile.UpdateProfileViewModel
 import com.tunanh.clicktofood_hilt.R
 import com.tunanh.clicktofood_hilt.base.BaseFragment
 import com.tunanh.clicktofood_hilt.data.local.model.User

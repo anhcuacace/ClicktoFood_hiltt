@@ -26,7 +26,32 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             requireActivity().supportFragmentManager,
             lifecycle
         )
+        binding.viewPager2.isUserInputEnabled=false
         binding.viewPager2.adapter=adapter
+
+        binding.buttonNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.home->{
+                    binding.viewPager2.currentItem=0
+                    return@setOnItemSelectedListener true
+                }
+                R.id.category->{
+                    binding.viewPager2.currentItem=1
+                    return@setOnItemSelectedListener true
+                }
+                R.id.cart->{
+                    binding.viewPager2.currentItem=2
+                    return@setOnItemSelectedListener true
+                }
+                R.id.more->{
+                    binding.viewPager2.currentItem=3
+                    return@setOnItemSelectedListener true
+                }
+                else -> {
+                    return@setOnItemSelectedListener false
+                }
+            }
+        }
 
     }
 

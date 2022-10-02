@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.tunanh.clicktofood.data.remote.model.Slider
+import com.tunanh.clicktofood_hilt.data.remote.model.Slider
 import com.tunanh.clicktofood_hilt.R
 import com.tunanh.clicktofood_hilt.databinding.ItemSlideBinding
 import com.tunanh.clicktofood_hilt.util.setOnSingClickListener

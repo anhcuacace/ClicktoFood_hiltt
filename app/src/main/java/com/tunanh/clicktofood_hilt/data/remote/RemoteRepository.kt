@@ -1,5 +1,8 @@
 package com.tunanh.clicktofood_hilt.data.remote
 
+import com.tunanh.clicktofood_hilt.data.remote.model.Categories
+import com.tunanh.clicktofood_hilt.data.remote.model.Meals
+import com.tunanh.clicktofood_hilt.data.remote.model.Slider
 import com.tunanh.clicktofood_hilt.data.remote.service.Service
 import com.tunanh.clicktofood_hilt.di.IoDispatcher
 import kotlinx.coroutines.CoroutineDispatcher
@@ -13,15 +16,15 @@ class RemoteRepository @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher
 ) {
 
-    suspend fun getAllPhotos() = withContext(dispatcher) {
+    suspend fun getAllPhotos():List<Slider> = withContext(dispatcher) {
         service.getAllPhoto("https://click-to-food-3639d-default-rtdb.firebaseio.com/app/slider.json")
     }
 
-    suspend fun getAllCategory() = withContext(dispatcher) {
+    suspend fun getAllCategory(): Categories = withContext(dispatcher) {
         service.getAllCategory()
     }
 
-    suspend fun getAllPhoToList(c: String) = withContext(dispatcher) {
+    suspend fun getAllPhoToList(c: String):Meals = withContext(dispatcher) {
         service.getAllFoodList(c)
     }
 

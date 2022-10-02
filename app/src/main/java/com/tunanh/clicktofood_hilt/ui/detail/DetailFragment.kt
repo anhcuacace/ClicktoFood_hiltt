@@ -10,8 +10,7 @@ import com.tunanh.clicktofood_hilt.ui.custemview.BottomSheetDialogFragment
 import com.tunanh.clicktofood_hilt.ui.search.SearchFoodAdapter
 import com.tunanh.clicktofood_hilt.util.shareLink
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.supervisorScope
+import kotlinx.coroutines.*
 
 @AndroidEntryPoint
 class DetailFragment : BaseFragment<FragmentDetailBinding>() {
@@ -27,15 +26,16 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
     }
 
     private  fun loadView() {
-        viewModel.SupervisorJob{
-
+        val scope= CoroutineScope(SupervisorJob()+ Dispatchers.Main)
+        scope.launch {
+            viewModel.foodInfo.observe(viewLifecycleOwner) { food ->
+                click(food)
+                bindingData(food)
+            }
+            recyclerview()
         }
 
-        viewModel.foodInfo.observe(this) { food ->
-            click(food)
-            bindingData(food)
-        }
-        recyclerview()
+
     }
 
     private fun recyclerview() {
@@ -61,12 +61,9 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
 
 
     private fun bindingData(food: Food) {
-
             "   ${food.star}".also { binding.star.text = it }
             binding.foodName.text = food.title
             "${food.title}, ngon tuyệt zời".also { binding.foodName1.text = it }
-
-
 
     }
 
@@ -80,6 +77,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
         binding.actionBar.setOnClickImageRight2 {
             getNavController().navigate(R.id.action_detailFragment_to_searchFragment)
         }
+
     }
 
 

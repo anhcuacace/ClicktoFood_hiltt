@@ -7,6 +7,7 @@ import com.tunanh.clicktofood_hilt.base.BaseViewModel
 import com.tunanh.clicktofood_hilt.data.remote.RemoteRepository
 import com.tunanh.clicktofood_hilt.data.remote.model.Categories
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -24,7 +25,7 @@ class MainFragmentViewModel @Inject constructor(
     private fun loadCategory() {
         viewModelScope.launch {
             try {
-                val data = async { remoteRepository.getAllCategory() }
+                val data = async(Dispatchers.IO) { remoteRepository.getAllCategory() }
                 categoryList.postValue(data.await())
             } catch (e: ApiException) {
                 e.printStackTrace()

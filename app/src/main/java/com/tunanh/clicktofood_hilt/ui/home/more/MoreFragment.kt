@@ -7,7 +7,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.tunanh.clicktofood_hilt.R
 import com.tunanh.clicktofood_hilt.base.BaseFragment
-import com.tunanh.clicktofood_hilt.data.local.model.User
 import com.tunanh.clicktofood_hilt.databinding.FragmentMoreBinding
 import com.tunanh.clicktofood_hilt.listener.OnClickConfirmDialog
 import com.tunanh.clicktofood_hilt.util.openPlaystore
@@ -25,7 +24,7 @@ class MoreFragment : BaseFragment<FragmentMoreBinding>() {
     private var itemMoreList2 = mutableListOf<ItemMore>()
     override val viewModel: MoreViewModel by viewModels ()
 
-    private var user: User? = null
+
     override fun layoutRes(): Int = R.layout.fragment_more
 
 
@@ -83,15 +82,15 @@ class MoreFragment : BaseFragment<FragmentMoreBinding>() {
 
 
     private fun getInfo() {
-        viewModel.user.observe(viewLifecycleOwner) {
-            user = it
-            context?.let { it1 ->
+        viewModel.user.observe(viewLifecycleOwner) {user ->
+
+            requireContext().let { it1 ->
                 Glide.with(it1).load(Uri.parse(user?.image)).error(R.drawable.ic_account_circle)
                     .into(binding.avt)
             }
-            binding.name.text = user?.name ?: "Name"
-            binding.email.text = user?.email
-            binding.phone.text = user?.phone ?: "Phone"
+            binding.name.text = user.name
+            binding.email.text = user.email
+            binding.phone.text = user.phone
         }
         mainViewModel.isLoadProfile = {
             viewModel.getUser()

@@ -46,7 +46,7 @@ class BottomSheetDialogFragment(var food: Food) : BottomSheetDialogFragment() {
             (activity as MainActivity).viewModel.updateLove(food)
         }
         binding?.tvNameItem?.text = food.title
-        binding?.tvPrice?.text = "${food.cost} $"
+        "${food.cost} $".also { binding?.tvPrice?.text = it }
         binding?.lnShare?.setOnSingClickListener {
             shareLink(
                 food.img.toString(),

@@ -1,5 +1,6 @@
 package com.tunanh.clicktofood_hilt.ui.home.cart
 
+import android.annotation.SuppressLint
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.tunanh.clicktofood_hilt.R
@@ -56,6 +57,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun initRecycleView() {
         mainViewModel.isLoadCart = {
             viewModel.addToCart()
@@ -104,7 +106,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
         }
         sum *= voucher
         sum += fee
-        binding.total.text = "$sum $"
+        "$sum $".also { binding.total.text = it }
         if (sum.toString().isEmpty()) {
             binding.constraintLayout.visibility = View.GONE
         } else {

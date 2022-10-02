@@ -1,4 +1,4 @@
-package com.tunanh.clicktofood.data.remote.model
+package com.tunanh.clicktofood_hilt.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
