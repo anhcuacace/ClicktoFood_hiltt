@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivSearchViewLayoutLeft"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/gray_400"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/edtSearchViewLayoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/ivSearchViewLayoutRight"
+            android:layout_toEndOf="@id/ivSearchViewLayoutLeft"
+            android:background="@null"
+
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="255"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ivSearchViewLayoutRight"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_cancel"
+            app:tint="@color/gray_400"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
+    </merge>
+

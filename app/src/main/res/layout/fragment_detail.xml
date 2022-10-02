@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tunanh.clicktofood_hilt.ui.custemview.ActionBar
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:action_bar_src_left="@drawable/ic_back_black"
+            app:action_bar_src_right="@drawable/ic_share"
+            app:action_bar_src_right2="@drawable/ic_search" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvFoodAndAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/restaurant_name"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#EF2271"
+                    app:cardCornerRadius="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFoodAndAddress">
+
+
+                    <TextView
+                        android:id="@+id/food_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:textColor="@color/edt_background"
+                        android:textSize="14sp"
+                        android:padding="@dimen/_4sdp"
+                        android:textStyle="bold"
+                        app:drawableLeftCompat="@drawable/ic_wine_bar"
+                        tools:text="GoFood Partner" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/food_name1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="@id/cardViewPink"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cardViewPink"
+                    app:layout_constraintTop_toTopOf="@id/cardViewPink"
+                    tools:text="Wings of wings, Fast Food" />
+
+
+                <RelativeLayout
+                    android:id="@+id/nestedView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewPink">
+
+
+                    <TextView
+                        android:id="@+id/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/star"
+                        android:layout_alignBottom="@id/star"
+                        android:layout_marginStart="2dp"
+                        android:gravity="center_vertical"
+                        android:maxLength="6"
+                        android:textColor="@color/textcolor1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:drawableLeftCompat="@drawable/ic_star"
+                        tools:text="2.45" />
+
+                    <TextView
+                        android:id="@+id/tvRatings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/star"
+                        android:text="@string/_200_ratings" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/star"
+                        android:layout_alignBottom="@id/tvRatings"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tvRatings"
+                        android:background="#41000000" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/promoLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/nestedView">
+
+                    <include layout="@layout/promo" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvBestseller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/bestsellers"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/promoLayout1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/food_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBestseller"
+                    tools:listitem="@layout/item_temp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ActionBar">
+        <attr name="action_bar_title" format="string"/>
+        <attr name="action_bar_src_left" format="reference"/>
+        <attr name="action_bar_src_right" format="reference"/>
+        <attr name="action_bar_src_right2" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="SearchView">
+        <attr name="search_view_hint" format="string" />
+        <attr name="search_view_right_icon" format="reference" />
+        <attr name="search_view_left_icon" format="reference" />
+    </declare-styleable>
+</resources>

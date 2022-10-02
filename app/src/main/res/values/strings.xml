@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Click To Food</string>
+
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="Name">Name: </string>
+    <string name="Address">Address: </string>
+    <string name="phone">Phone:  </string>
+    <string name="next">Next</string>
+
+
+    <string name="more">More</string>
+    <string name="wishlist">Wish list</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="count_voucher">8 promos are available</string>
+    <!--    text fragment home-->
+    <string name="viewall">View All</string>
+    <string name="hotdealforhotmenu">Hot deal for hot menu</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <!--    distance-->
+
+    <!--    login-->
+    <string name="welcome">"Welcome"</string>
+    <string name="username" translatable="false">Email</string>
+    <string name="password">Password</string>
+    <string name="signin">Sign in</string>
+    <string name="login">Log in</string>
+    <string name="signin_with_google">Continue with google</string>
+    <string name="forgetpassword">Forget Password?</string>
+    <string name="create_new_acc">Create a new account</string>
+
+    <string name="facebook_app_id" translatable="false">3122316111339918</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb3122316111339918</string>
+    <string name="facebook_client_token" translatable="false">b97cf45301b3f047eff4fe00f22b4ffc</string>
+    <string name="or">OR</string>
+
+    <!--    ko rõ-->
+    <string name="Getstarted">Get Started</string>
+    <string name="search">Search</string>
+    <!-- sign up-->
+    <string name="signup">Sign Up</string>
+    <string name="login_here">Already have an account?</string>
+    <string name="comfirmpass">Confirm password</string>
+    <string name="namesignup">Name</string>
+    <string name="terms">I Agree To The Terms and condition</string>
+    <!--    more-->
+    <string name="edit_profile">Edit profile     ></string>
+    <string name="account">Account</string>
+    <string name="myorders">My orders</string>
+    <string name="promos">Promos</string>
+    <string name="payment_methosds">Payment Methods</string>
+    <string name="help">Help &amp; My Tickets</string>
+    <string name="language">Change Language</string>
+    <string name="invite_friend">Invite friends</string>
+    <string name="notifications">Notifications</string>
+    <string name="logout">Log out</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="termsofservice">Terms of Service</string>
+    <string name="rate_app">Rate App</string>
+    <string name="quick_login">Quick login</string>
+    <string name="save">Saved</string>
+    <string name="app_id" translatable="false">com.tunanh.clicktofood</string>
+    <string name="request_read_internal">you refused. press one more time to open settings</string>
+    <!--app-->
+    <string name="appID" translatable="false">993028136701941997</string>
+    <string name="general" translatable="false">General</string>
+    <string name="update_profile">Update Profile</string>
+
+    <!--    home-->
+    <string name="see_all">See all</string>
+    <string name="listfood">delicious food</string>
+    <string name="rating" translatable="false">4,3 . 60+ ratings</string>
+    <string name="tvRecommend">More to love. Recommend of you.</string>
+    <string name="try_these_and_thank_us_latter">Try these and thank us later</string>
+    <string name="restaurant_name">restaurant name</string>
+    <string name="network_fail">network connection error</string>
+    <string name="connected">connection has been restored</string>
+    <string name="bestsellers">Bestsellers</string>
+    <string name="_200_ratings">200+ ratings</string>
+    <string name="place_delivery_order">Place delivery order</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="ahihi" translatable="false">ahihi</string>
+    <string name="addfood">food has been added</string>
+    <string name="what_would_you_like_to_eat">  What would you like to eat?</string>
+    <!--    search-->
+    <string name="history_search">Search history</string>
+    <string name="remove_all">Remove All</string>
+    <string name="empty_content">you haven\'t added a favorite dish yet</string>
+    <string name="your_order_has_been_placed">Your Order Has Been Placed</string>
+    <string name="thank_you_for_purchasing_our_product_n_please_come_again">Thank you for purchasing our product  Please Come Again.</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="cart_is_currently_empty">cart is currently empty</string>
+    <string name="cash">cash</string>
+
+</resources>
