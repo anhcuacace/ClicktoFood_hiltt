@@ -20,7 +20,7 @@ class IntroFragment : BaseFragment<FragmentIntroBinding>() {
             //mở link nè
         }
         viewModel.introList.observe(this) {
-            adapter.itemtList = it
+            adapter.itemList = it
         }
         binding.screenViewpager.adapter = adapter
 

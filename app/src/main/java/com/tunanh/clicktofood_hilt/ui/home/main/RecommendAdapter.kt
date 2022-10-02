@@ -35,7 +35,7 @@ class RecommendAdapter :
 
 
     var onClickLike: ((Food) -> Unit)? = null
-    var onClickItem: ((Food) -> Unit)? = null
+    var onClickItem: ((Long) -> Unit)? = null
     var foodList: List<Food>? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v =
@@ -46,7 +46,7 @@ class RecommendAdapter :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         foodList?.let { holder.bind(it[position]) }
         holder.itemView.setOnSingClickListener {
-            foodList?.let { it1 -> onClickItem?.invoke(it1[position]) }
+            foodList?.let { it1 -> onClickItem?.invoke(it1[position].id) }
         }
         holder.binding.btnFavorite.setOnSingClickListener {
             foodList.also {

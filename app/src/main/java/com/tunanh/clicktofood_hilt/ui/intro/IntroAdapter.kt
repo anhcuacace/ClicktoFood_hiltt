@@ -17,7 +17,7 @@ class IntroAdapter : RecyclerView.Adapter<IntroAdapter.IntroViewHolder>() {
         }
     }
 
-    var itemtList: List<IntroItem>? = null
+    var itemList: List<IntroItem>? = null
     var onItemClick: ((IntroItem, Int) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IntroViewHolder {
         val binding = ItemIntroBinding
@@ -26,13 +26,13 @@ class IntroAdapter : RecyclerView.Adapter<IntroAdapter.IntroViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: IntroViewHolder, position: Int) {
-        itemtList?.get(position)?.let { holder.bind(it) }
+        itemList?.get(position)?.let { holder.bind(it) }
         holder.itemView.setOnSingClickListener {
-            itemtList?.let { it1 -> onItemClick?.invoke(it1[position], position) }
+            itemList?.let { it1 -> onItemClick?.invoke(it1[position], position) }
         }
     }
 
 
-    override fun getItemCount(): Int = itemtList?.size ?: 0
+    override fun getItemCount(): Int = itemList?.size ?: 0
 
 }

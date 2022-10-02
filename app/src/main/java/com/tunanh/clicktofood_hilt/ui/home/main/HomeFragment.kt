@@ -72,7 +72,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         recommendAdapter.onClickItem = {
             getNavController().navigate(
                 R.id.action_mainFragment_to_detailFragment,
-                bundleOf(Pair("food", it))
+                bundleOf(Pair("idFood", it))
             )
         }
         recyclerViewAdapter.onClickItem = {

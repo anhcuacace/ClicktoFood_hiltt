@@ -10,9 +10,9 @@ import com.tunanh.clicktofood_hilt.data.local.model.Food
 import com.tunanh.clicktofood_hilt.data.local.model.KeyWorkSearch
 import com.tunanh.clicktofood_hilt.data.remote.RemoteRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val remoteRepository: RemoteRepository,
@@ -49,7 +49,7 @@ class HomeViewModel @Inject constructor(
 
 
     private fun loadSlider() {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             try {
                 val data = remoteRepository.getAllPhotos()
                 sliderList.postValue(data)

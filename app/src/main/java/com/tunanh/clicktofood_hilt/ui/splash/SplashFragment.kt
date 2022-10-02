@@ -1,4 +1,4 @@
-package com.tunanh.clicktofood.ui.splash
+package com.tunanh.clicktofood_hilt.ui.splash
 
 import android.os.Handler
 import android.os.Looper
@@ -8,7 +8,6 @@ import com.tunanh.clicktofood_hilt.R
 import com.tunanh.clicktofood_hilt.base.BaseFragment
 import com.tunanh.clicktofood_hilt.databinding.FragmentSplashBinding
 import com.tunanh.clicktofood_hilt.ui.main.MainActivity
-import com.tunanh.clicktofood_hilt.ui.splash.SplashViewModel
 import com.tunanh.clicktofood_hilt.util.hasNetworkConnection
 import dagger.hilt.android.AndroidEntryPoint
 

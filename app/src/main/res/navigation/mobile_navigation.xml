@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.tunanh.clicktofood.ui.splash.SplashFragment"
+        android:name="com.tunanh.clicktofood_hilt.ui.splash.SplashFragment"
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action

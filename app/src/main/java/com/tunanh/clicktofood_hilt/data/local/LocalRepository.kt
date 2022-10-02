@@ -91,7 +91,10 @@ class LocalRepository @Inject constructor(
         withContext(dispatcher) {
             foodDao.findFoodByName(name)
         }
-
+    suspend fun findFoodById(id: Long)= withContext(dispatcher){
+        foodDao.selectFromId(id)
+    }
+    //history
     suspend fun insertHistory(keyword: KeyWorkSearch) =
         withContext(dispatcher) {
             historySearchDao.insertHistory(keyword)
